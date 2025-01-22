@@ -1,0 +1,137 @@
+.skill-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin: 40px 0;
+  border-bottom: 6px solid #333;
+  padding-bottom: 30px;
+}
+
+.skill-title {
+  font-size: 3rem;
+  text-align: center;
+  border-top: 6px solid #333;
+  padding-top: 20px;
+}
+
+/* Styling for the Frontend and Backend skill groups */
+.skill-group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* 4 icons per row */
+  gap: 20px;
+  max-width: 400px;
+  /* Adjust the max-width as needed */
+  margin: 0 auto;
+}
+
+.skill-card {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #ddd;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  /* Ensures the pseudo-element is clipped */
+  transition: all 1s ease;
+  /* Slower transition for overall effect */
+}
+
+.skill-card i {
+  font-size: 30px;
+  color: #4CAF50;
+  margin-bottom: 10px;
+  transition: transform 1s ease, color 1s ease;
+  /* Slower icon scale and color transition */
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  transition: width 1s ease;
+  /* Slow down the background expansion */
+}
+
+.skill-card:hover::before {
+  width: 100%;
+  /* Expand to cover the entire card */
+}
+
+.skill-card h4 {
+  font-size: 16px;
+  margin: 0;
+  color: #000;
+  /* Default text color */
+  z-index: 1;
+  /* Ensures text stays on top */
+  transition: color 1s ease;
+  /* Slower text color transition */
+}
+
+.skill-card:hover h4 {
+  color: #FFD9B7;
+  /* Change text color on hover */
+}
+
+.skill-card:hover i {
+  transform: scale(1.2);
+  /* Slightly enlarge the icon */
+  color: #FFD9B7;
+  /* Match the hover text color */
+}
+
+
+.frontend,
+.backend {
+  color: black;
+}
+
+
+.skill-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* Hover effect for skill cards */
+.skill-card:hover {
+  background-color: #f1f1f1;
+  /* Change background color on hover */
+  border-color: #FFD9B7;
+  /* Change border color on hover */
+}
+
+/* Hover effect for the icon inside the card */
+.skill-card:hover i {
+  transform: scale(1.2);
+  /* Enlarge icon on hover */
+}
+
+.frontend-skills,
+.backend-skills {
+  border: 2px solid #e8e0e0;
+  /* Add a solid border with color */
+  padding: 75px;
+  /* Optional: Add padding inside the border */
+  margin-bottom: 20px;
+  /* Optional: Add some margin at the bottom for spacing */
+  border-radius: 20%;
+}
+
+.backend-skills {
+  padding-bottom: 40px;
+}
